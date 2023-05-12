@@ -1,0 +1,21 @@
+{7b815551-8156-4fc7-87a1-6509d540759c} bank:/Master Bank
+{e39c7585-f02d-0385-01e8-eff724b37304} bank:/Master Bank.strings
+{9f08114d-36ec-44cc-b8bf-b2babda09f9e} bus:/
+{7f7c05a4-e05a-4d44-94fe-d4691147a9b7} bus:/Master
+{e3492bec-f854-4fbb-b2bc-23586269032e} bus:/Master/Copilot
+{a5a85a81-afd5-4425-9dc2-6e50f7776e6a} bus:/Master/Exterior Processed
+{06db5351-0b2f-4648-b97a-a33b40a00e11} bus:/Master/Exterior Processed/Aircraft
+{b6c156f1-9861-405c-a622-92b2ab8010a7} bus:/Master/Exterior Processed/Environment
+{8dbbc9d7-a954-4ed0-b1f1-f8111b03cbd1} bus:/Master/Exterior Unprocessed
+{751f5066-4651-4afb-a410-4cb9db0894c9} bus:/Master/Interior
+{d8526059-b27c-4eae-9b14-a1ee1cb3dfa1} bus:/Master/Radios
+{77575f3b-b9cd-4bff-9056-637cff744a14} bus:/Master/UI
+{aa5d209f-c648-49c5-bdae-9d24e5c9efed} event:/Engines/engines_ext
+{5ce02555-f9e2-482c-b0d0-2acc1174799d} event:/Engines/engines_int
+{6a2925f1-f8a5-4ac5-a711-bd4888e9f021} event:/Engines/reversers_int
+{4703017e-9d8f-43c8-a9f6-91e2f6350378} event:/Ground/roll
+{b7b6ec54-5595-46ec-ad14-d2083506edaf} parameter:/sim.flightmodel.position.groundspeed[#]
+{79bf460a-20c5-4824-91d5-5e5d4695f7ef} parameter:/sim.flightmodel2.engines.engine_rotation_speed_rad_sec[#]
+{9765f126-9a17-4e11-bcae-88d8cad89347} parameter:/sim.flightmodel2.engines.thrust_reverser_deploy_ratio[#]
+{299f496d-8420-4da0-9298-468a687d4dcd} parameter:/sim.graphics.view.view_is_external[#]
+{2db8759c-3566-487b-8f9b-887675958b06} snapshot:/external_view

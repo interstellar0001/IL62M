@@ -1,0 +1,92 @@
+A
+1000
+ACF_SOUNDS
+
+DISABLE_LEGACY_ALERT_SOUNDS
+
+//Copyright 2023 Robert Bussang, Only for freeware distribution.
+
+BEGIN_SOUND_SPACE
+	SOUND_INDEX 0
+	BLEND_DEPTH 0.1
+	AABB 1.875 8 29.5 -1.875 -8 -77.5 
+END_SOUND_SPACE
+
+//ENGINES
+//INTERNAL
+
+BEGIN_SOUND_ATTACHMENT
+	SNAPSHOT_NAME /external_view
+	EVENT_START_COND sim/graphics/scenery/current_planet == 0
+	EVENT_END_COND sim/graphics/scenery/current_planet != 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Ground/roll
+	EVENT_START_COND sim/flightmodel2/gear/on_ground[1] == 1
+	EVENT_END_COND sim/flightmodel2/gear/on_ground[1] == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_int
+	VEH_PART engine 0
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] < 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_int
+	VEH_PART engine 1
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[1] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[1] < 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_int
+	VEH_PART engine 2
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[2] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[2] < 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_int
+	VEH_PART engine 3
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[3] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[3] < 1
+END_SOUND_ATTACHMENT
+
+//EXTERNAL
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_ext
+	VEH_PART engine 0
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] < 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_ext
+	VEH_PART engine 1
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[1] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[1] < 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_ext
+	VEH_PART engine 1
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[2] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[2] < 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /Engines/engines_ext
+	VEH_PART engine 1
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[3] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[3] < 1
+END_SOUND_ATTACHMENT
+
+//REVERSERS
