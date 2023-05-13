@@ -1,4 +1,3 @@
---//timer
 createGlobalPropertyf("il62/frame_time", 0);
 
 --//FrontPanel
@@ -75,6 +74,9 @@ eng_4_oil_temp=createGlobalPropertyf("il62/frgauges/eng_4/oil_temp", 0)
 
 
 --Pedestal
+
+fcpLight=createGlobalPropertyf("il62/lights/fcp/strength", 0)
+
 --//FUEL//--
 --tumb--
 tank5l_1=createGlobalPropertyf("il62/fuel/tumb/tank5l_1", 0)
@@ -158,12 +160,19 @@ speedATminus=createGlobalPropertyf("il62/autopilot/speedATminus", 0)
 
 --//overhead//--
 wing_light_drop=createGlobalPropertyf("il62/over/lights/wing_light_drop", 0)
+wing_light_drop=createGlobalPropertyf("il62/over/lights/wing_light_drop_switch", 0)
 fuse_light_drop=createGlobalPropertyf("il62/over/lights/fuse_light_drop", 0)
+fuse_light_drop=createGlobalPropertyf("il62/over/lights/fuse_light_drop_switch", 0)
 wing_light_turn=createGlobalPropertyf("il62/over/lights/wing_light_turn", 0)
+wing_light_turn=createGlobalPropertyf("il62/over/lights/wing_light_turn_switch", 0)
 fuse_light_turn=createGlobalPropertyf("il62/over/lights/fuse_light_turn", 0)
+fuse_light_turn=createGlobalPropertyf("il62/over/lights/fuse_light_turn_switch", 0)
 tumb_strobe=createGlobalPropertyf("il62/over/lights/strobe", 0)
+tumb_strobe=createGlobalPropertyf("il62/over/lights/strobe_switch", 0)
 tumb_beacon=createGlobalPropertyf("il62/over/lights/beacon", 0)
+tumb_beacon=createGlobalPropertyf("il62/over/lights/beacon_switch", 0)
 tumb_ano=createGlobalPropertyf("il62/over/lights/ano", 0)
+tumb_ano=createGlobalPropertyf("il62/over/lights/ano_switch", 0) -- TODO: Wtf is ano?
 rashod_eng1_big=createGlobalPropertyf("il62/over/fuel/rashod/eng1_big", 0)
 rashod_eng1_small=createGlobalPropertyf("il62/over/fuel/rashod/eng1_small", 0)
 rashod_eng2_big=createGlobalPropertyf("il62/over/fuel/rashod/eng2_big", 0)
