@@ -1,7 +1,63 @@
-[IL62_SASL INFO]: Initializing...
-[IL62_SASL INFO]: [DISPLAY] Monitor 0: 0, 0, 1920, 1080
-[IL62_SASL INFO]: Path to module: E:\steam/steamapps/common/X-Plane 12/Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua
-[IL62_SASL INFO]: Loading module...
-[IL62_SASL ERROR]: Module not detected
-[IL62_SASL INFO]: Disabling...
-[IL62_SASL INFO]: SASL plugin stopped...
+[IL62 INFO]: Initializing...
+[IL62 INFO]: [DISPLAY] Monitor 0: 0, 0, 1920, 1080
+[IL62 INFO]: Path to module: E:\steam/steamapps/common/X-Plane 12/Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua
+[IL62 INFO]: Loading module...
+[IL62 INFO]: [LUA]: loading	module
+[IL62 INFO]: [LUA]: "module"	Ilyushin 62M by Project Ilyushin
+[IL62 INFO]: [LUA]: "module"	Lua version is	Lua 5.1
+[IL62 INFO]: [LUA]: loading	functions
+[IL62 INFO]: [LUA]: "functions"	Loaded functions!
+[IL62 INFO]: [LUA]: loading	declare_datarefs
+[IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/frame_time> already exists
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:1 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/lit/rect1> already exists
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:547 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/lit/rect1> already exists
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:548 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/lit/rect1> already exists
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:549 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
+[IL62 WARN]: [STACK]:| ...
+[IL62 INFO]: [LUA]: loading	timelogic
+[IL62 INFO]: [LUA]: loading	gauges
+[IL62 INFO]: [LUA]: loading	electrical_bat
+[IL62 INFO]: [LUA]: "electrical_bat"	Loaded custom_modules/electrical/electrical_bat.lua!
+[IL62 INFO]: [LUA]: loading	dc_logic
+[IL62 INFO]: [LUA]: "dc_logic"	Loaded custom_modules/electrical/dc_logic.lua!
+[IL62 INFO]: Module loaded
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: [LUA]: "electrical_bat"	1
+[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
+[IL62 INFO]: Disabling...
+[IL62 INFO]: SASL plugin stopped...

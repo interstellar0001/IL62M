@@ -72,6 +72,10 @@ eng_4_fuel_pres=createGlobalPropertyf("il62/frgauges/eng_4/fuel_pres", 0)
 eng_4_oil_pres=createGlobalPropertyf("il62/frgauges/eng_4/oil_pres", 0)
 eng_4_oil_temp=createGlobalPropertyf("il62/frgauges/eng_4/oil_temp", 0)
 
+--Flightcontrols
+captRudder=createGlobalPropertyf("il62/controls/capt_rudder", 0)
+foRudder=createGlobalPropertyf("il62/controls/fo_rudder", 0)
+
 
 --Pedestal
 
@@ -206,10 +210,10 @@ amp_gen1=createGlobalPropertyf("il62/electr/gauges/gen1_amp", 0)
 amp_gen2=createGlobalPropertyf("il62/electr/gauges/gen2_amp", 0)
 amp_gen3=createGlobalPropertyf("il62/electr/gauges/gen3_amp", 0)
 amp_gen4=createGlobalPropertyf("il62/electr/gauges/gen4_amp", 0)
-gc_gen1=createGlobalPropertyf("il62/electr/gauges/gen1_gc", 0)
-gc_gen2=createGlobalPropertyf("il62/electr/gauges/gen2_gc", 0)
-gc_gen3=createGlobalPropertyf("il62/electr/gauges/gen3_gc", 0)
-gc_gen4=createGlobalPropertyf("il62/electr/gauges/gen4_gc", 0)
+hz_gen1=createGlobalPropertyf("il62/electr/gauges/gen1_hz", 0)
+hz_gen2=createGlobalPropertyf("il62/electr/gauges/gen2_hz", 0)
+hz_gen3=createGlobalPropertyf("il62/electr/gauges/gen3_hz", 0)
+hz_gen4=createGlobalPropertyf("il62/electr/gauges/gen4_hz", 0)
 leftlin_volt=createGlobalPropertyf("il62/electr/gauges/volt_lin_left", 0)
 rightlin_volt=createGlobalPropertyf("il62/electr/gauges/volt_lin_right", 0)
 left_volt=createGlobalPropertyf("il62/electr/gauges/volt_left", 0)
@@ -217,35 +221,133 @@ rightvolt=createGlobalPropertyf("il62/electr/gauges/volt_right", 0)
 faza_volt=createGlobalPropertyf("il62/electr/gauges/volt_faza", 0)
 bat_amp=createGlobalPropertyf("il62/electr/gauges/bat_amp", 0)
 
---tumblers
-akb1=createGlobalPropertyf("il62/electr/tumb/akb1", 1)
-akb2=createGlobalPropertyf("il62/electr/tumb/akb2", 0)
-akb3=createGlobalPropertyf("il62/electr/tumb/akb3", 0)
-akb4=createGlobalPropertyf("il62/electr/tumb/akb4", 0)
-rap=createGlobalPropertyf("il62/electr/tumb/rap", 0)
-teh_r_vu=createGlobalPropertyf("il62/electr/tumb/vu_teh_r", 0)
-teh_l_vu=createGlobalPropertyf("il62/electr/tumb/vu_teh_l", 0)
-vu_rad=createGlobalPropertyf("il62/electr/tumb/vu_rad", 0)
-vu_sh=createGlobalPropertyf("il62/electr/tumb/vu_sh", 0)
-vu1=createGlobalPropertyf("il62/electr/tumb/vu1", 0)
-vu2=createGlobalPropertyf("il62/electr/tumb/vu2", 0)
-vu3=createGlobalPropertyf("il62/electr/tumb/vu3", 0)
-vu4=createGlobalPropertyf("il62/electr/tumb/vu4", 0)
-apu_dc=createGlobalPropertyf("il62/electr/tumb/apu_dc", 0)
-par1=createGlobalPropertyf("il62/electr/tumb/parall1", 0)
-par2=createGlobalPropertyf("il62/electr/tumb/parall2", 0)
-par3=createGlobalPropertyf("il62/electr/tumb/parall3", 0)
-par4=createGlobalPropertyf("il62/electr/tumb/parall4", 0)
-gen1=createGlobalPropertyf("il62/electr/tumb/gen1", 0)
-gen2=createGlobalPropertyf("il62/electr/tumb/gen2", 0)
-gen3=createGlobalPropertyf("il62/electr/tumb/gen3", 0)
-gen4=createGlobalPropertyf("il62/electr/tumb/gen4", 0)
-gen_apu_gc_tumb=createGlobalPropertyf("il62/electr/tumb/gen_apu_gc_tumb", 0)
-gen_apu_ac=createGlobalPropertyf("il62/electr/tumb/gen_apu_ac", 0)
-akb1_kolp=createGlobalPropertyf("il62/electr/tumb/akb1_kolp", 0)
-akb2_kolp=createGlobalPropertyf("il62/electr/tumb/akb2_kolp", 0)
-akb3_kolp=createGlobalPropertyf("il62/electr/tumb/akb3_kolp", 0)
-akb4_kolp=createGlobalPropertyf("il62/electr/tumb/akb4_kolp", 0)
+--Electronics
+-- B A T T E R I E S
+bat1=createGlobalPropertyf("il62/electr/base/bat1", 0)
+bat2=createGlobalPropertyf("il62/electr/base/bat2", 0)
+bat3=createGlobalPropertyf("il62/electr/base/bat3", 0)
+bat4=createGlobalPropertyf("il62/electr/base/bat4", 0)
+batAmp1=createGlobalPropertyf("il62/electr/base/bat_amp_1", 0)
+batAmp2=createGlobalPropertyf("il62/electr/base/bat_amp_2", 0)
+batAmp3=createGlobalPropertyf("il62/electr/base/bat_amp_3", 0)
+batAmp4=createGlobalPropertyf("il62/electr/base/bat_amp_4", 0)
+batCC1=createGlobalPropertyf("il62/electr/base/bat_cc_1", 0)
+batCC2=createGlobalPropertyf("il62/electr/base/bat_cc_2", 0)
+batCC3=createGlobalPropertyf("il62/electr/base/bat_cc_3", 0)
+batCC4=createGlobalPropertyf("il62/electr/base/bat_cc_4", 0)
+batVolt1=createGlobalPropertyf("il62/electr/base/bat_volt_1", 0)
+batVolt2=createGlobalPropertyf("il62/electr/base/bat_volt_2", 0)
+batVolt3=createGlobalPropertyf("il62/electr/base/bat_volt_3", 0)
+batVolt4=createGlobalPropertyf("il62/electr/base/bat_volt_4", 0)
+batTemp1=createGlobalPropertyf("il62/electr/base/bat_temp_1", 0)
+batTemp2=createGlobalPropertyf("il62/electr/base/bat_temp_2", 0)
+batTemp3=createGlobalPropertyf("il62/electr/base/bat_temp_3", 0)
+batTemp4=createGlobalPropertyf("il62/electr/base/bat_temp_4", 0)
+bat1_switch=createGlobalPropertyf("il62/electr/base/bat1_switch", 0)
+bat2_switch=createGlobalPropertyf("il62/electr/base/bat2_switch", 0)
+bat3_switch=createGlobalPropertyf("il62/electr/base/bat3_switch", 0)
+bat4_switch=createGlobalPropertyf("il62/electr/base/bat4_switch", 0)
+batConnected=createGlobalPropertyi("il62/electr/bat_connected", 0) -- Is any battery connected
+
+-- R E C T I F I E R S
+rect1=createGlobalPropertyf("il62/electr/base/rect1", 0)
+rect2=createGlobalPropertyf("il62/electr/base/rect2", 0)
+rect3=createGlobalPropertyf("il62/electr/base/rect3", 0)
+rect4=createGlobalPropertyf("il62/electr/base/rect4", 0)
+rect1_volt=createGlobalPropertyf("il62/electr/base/rect1_volt", 0)
+rect2_volt=createGlobalPropertyf("il62/electr/base/rect2_volt", 0)
+rect3_volt=createGlobalPropertyf("il62/electr/base/rect3_volt", 0)
+rect4_volt=createGlobalPropertyf("il62/electr/base/rect4_volt", 0)
+rect1_amp=createGlobalPropertyf("il62/electr/base/rect1_amp", 0)
+rect2_amp=createGlobalPropertyf("il62/electr/base/rect2_amp", 0)
+rect3_amp=createGlobalPropertyf("il62/electr/base/rect3_amp", 0)
+rect4_amp=createGlobalPropertyf("il62/electr/base/rect4_amp", 0)
+
+
+-- B U S E S
+-- 27VDC
+leftDCBusVoltage=createGlobalPropertyf("il62/electr/buses/dc_left_volt", 0)
+rightDCBusVoltage=createGlobalPropertyf("il62/electr/buses/dc_right_volt", 0)
+leftDCBusAmp=createGlobalPropertyf("il62/electr/buses/dc_left_amp", 0)
+rightDCBusAmp=createGlobalPropertyf("il62/electr/buses/dc_right_amp", 0)
+leftDCBusSrc=createGlobalPropertyf("il62/electr/buses/dc_left_src", 0)
+rightDCBusSrc=createGlobalPropertyf("il62/electr/buses/dc_right_src", 0)
+leftDCBusConnected=createGlobalPropertyi("il62/electr/buses/leftDC_connect", 0)
+leftDCBusConnected=createGlobalPropertyi("il62/electr/buses/rightDC_connect", 0)
+bus27_connect=createGlobalPropertyi("il62/electr/buses/bus27_connect", 0)
+bus_connected=createGlobalPropertyi("il62/electr/buses/bus_connected", 0) -- Any bus connected (i think)
+
+-- 115VAC/200VAC
+bus115_1_volt=createGlobalPropertyf("il62/electr/buses/bus115_1_volt", 0)
+bus115_2_volt=createGlobalPropertyf("il62/electr/buses/bus115_2_volt", 0)
+bus115_3_volt=createGlobalPropertyf("il62/electr/buses/bus115_3_volt", 0)
+bus115_4_volt=createGlobalPropertyf("il62/electr/buses/bus115_4_volt", 0)
+bus115_1_amp=createGlobalPropertyf("il62/electr/buses/bus115_1_amp", 0)
+bus115_2_amp=createGlobalPropertyf("il62/electr/buses/bus115_2_amp", 0)
+bus115_3_amp=createGlobalPropertyf("il62/electr/buses/bus115_3_amp", 0)
+bus115_4_amp=createGlobalPropertyf("il62/electr/buses/bus115_4_amp", 0)
+
+--115VAC/200VAC Emergency
+bus115_em_1_volt=createGlobalPropertyf("il62/electr/buses/bus115_em_1_volt", 0)
+bus115_em_2_volt=createGlobalPropertyf("il62/electr/buses/bus115_em_2_volt", 0)
+bus115_em_1_amp=createGlobalPropertyf("il62/electr/buses/bus115_em_1_amp", 0)
+bus115_em_2_amp=createGlobalPropertyf("il62/electr/buses/bus115_em_2_amp", 0)
+
+-- G E N E R A T O R S
+gen1=createGlobalPropertyf("il62/electr/base/gen1", 0) -- Switches
+gen2=createGlobalPropertyf("il62/electr/base/gen2", 0)
+gen3=createGlobalPropertyf("il62/electr/base/gen3", 0)
+gen4=createGlobalPropertyf("il62/electr/base/gen4", 0)
+gen4=createGlobalPropertyf("il62/electr/base/gen5", 0) -- Gen5 = APU
+gen1_volt=createGlobalPropertyf("il62/electr/base/gen1_volt", 0)
+gen2_volt=createGlobalPropertyf("il62/electr/base/gen2_volt", 0)
+gen3_volt=createGlobalPropertyf("il62/electr/base/gen3_volt", 0)
+gen4_volt=createGlobalPropertyf("il62/electr/base/gen4_volt", 0)
+gen4_volt=createGlobalPropertyf("il62/electr/base/gen5_volt", 0)
+gen1_work=createGlobalPropertyi("il62/electr/base/gen1_work", 0)
+gen2_work=createGlobalPropertyi("il62/electr/base/gen2_work", 0)
+gen3_work=createGlobalPropertyi("il62/electr/base/gen3_work", 0)
+gen4_work=createGlobalPropertyi("il62/electr/base/gen4_work", 0)
+gen4_work=createGlobalPropertyi("il62/electr/base/gen5_work", 0)
+gen1_amp=createGlobalPropertyf("il62/electr/base/gen1_amp", 0)
+gen2_amp=createGlobalPropertyf("il62/electr/base/gen2_amp", 0)
+gen3_amp=createGlobalPropertyf("il62/electr/base/gen3_amp", 0)
+gen4_amp=createGlobalPropertyf("il62/electr/base/gen4_amp", 0)
+gen4_amp=createGlobalPropertyf("il62/electr/base/gen5_amp", 0)
+
+-- G P U (debug only)
+gpu_vb=createGlobalPropertyf("il62/debug/gpu_volt")
+gpu_wb=createGlobalPropertyi("il62/debug/gpu_work")
+gpu_ap=createGlobalPropertyf("il62/debug/gpu_amp")
+
+rap=createGlobalPropertyf("il62/electr/base/rap", 0)
+vu_rad=createGlobalPropertyf("il62/electr/base/vu_rad", 0)
+vu_sh=createGlobalPropertyf("il62/electr/base/vu_sh", 0)
+par1=createGlobalPropertyf("il62/electr/base/tie1", 0)
+par2=createGlobalPropertyf("il62/electr/base/tie2", 0)
+par3=createGlobalPropertyf("il62/electr/base/tie3", 0)
+par4=createGlobalPropertyf("il62/electr/base/tie4", 0)
+
+-- A P U
+apu_dc=createGlobalPropertyf("il62/electr/base/apu_dc", 0) -- APU DC rectifier
+gen_apu_gc_tumb=createGlobalPropertyf("il62/electr/base/gen_apu_gc_tumb", 0)
+gen_apu_ac=createGlobalPropertyf("il62/electr/base/gen_apu_ac", 0) -- APU AC generator
+apu_pump=createGlobalPropertyf("il62/electr/apu/pump", 0) -- APU fuel pump
+apu_main=createGlobalPropertyf("il62/electr/apu/main", 0) -- Main APU switch
+apu_syson=createGlobalPropertyi("il62/apu/system_on", 0) -- APU System on
+apu_start_mode=createGlobalPropertyf("il62/electr/apu/start_mode", 0) -- APU start mode (Normal/Cold Start)
+apu_damper=createGlobalPropertyf("il62/electr/apu/damper", 0) -- APU damper (I have no idea wtf a damper does)
+apu_start=createGlobalPropertyf("il62/electr/apu/start", 0) -- Start APU
+apu_startseq=createGlobalPropertyi("il62/apu/start_sequence", 0)
+apu_stop=createGlobalPropertyf("il62/electr/apu/stop", 0) -- Stop APU
+apu_startbus=createGlobalPropertyf("il62/electr/apu/apu_start_bus", 0)
+apu_startcc=createGlobalPropertyf("il62/electr/apu/apu_start_cc", 0)
+--apu_main_tumb_kolp=createGlobalPropertyf("il62/kvs/apu/tumb/main_tumb_kolp", 0) No idea what this is so disabled
+
+bus1_vol=createGlobalPropertyf("il62/electr/voltages/bus1_vdc", 0)
+bus2_vol=createGlobalPropertyf("il62/electr/voltages/bus2_vdc", 0)
+bus1_amp=createGlobalPropertyf("il62/electr/voltages/bus1_amps", 0)
+bus2_amp=createGlobalPropertyf("il62/electr/voltages/bus2_amps", 0)
 
 --lits
 vu1_lit=createGlobalPropertyf("il62/electr/tumb/vu1_lit", 0)
@@ -295,20 +397,6 @@ engine_4_oil_mes=createGlobalPropertyf("il62/engines/oil4", 0)
 
 
 
-
-
-
---apu
-apu_pump=createGlobalPropertyf("il62/kvs/apu/tumb/pump", 0)
-apu_main_tumb=createGlobalPropertyf("il62/kvs/apu/tumb/main_tumb", 0)
-apu_start_mode=createGlobalPropertyf("il62/kvs/apu/tumb/mode_start", 0)
-apu_zaslonka=createGlobalPropertyf("il62/kvs/apu/tumb/zaslonka", 0)
-apu_atart=createGlobalPropertyf("il62/kvs/apu/tumb/start", 0)
-apu_stop=createGlobalPropertyf("il62/kvs/apu/tumb/stop", 0)
-apu_main_tumb_kolp=createGlobalPropertyf("il62/kvs/apu/tumb/main_tumb_kolp", 0)
-
-
-
 pres_l_start=createGlobalPropertyf("il62/engines/pres_l_start", 0)
 pres_r_start=createGlobalPropertyf("il62/engines/pres_r_start", 0)
 apu_rpm=createGlobalPropertyf("il62/kvs/apu/rpm", 0)
@@ -323,10 +411,10 @@ apu_t_oil=createGlobalPropertyf("il62/kvs/apu/t_oil", 0)
 
 
 --//HydroSystem//--
-park_br_press=createGlobalPropertyf("il62/gidrosystem/parkbrakes", 0)
-br_press=createGlobalPropertyf("il62/gidrosystem/brakes", 0)
-press_general=createGlobalPropertyf("il62/gidrosystem/general_net", 0)
-press_hyd_pump=createGlobalPropertyf("il62/gidrosystem/pumpstation", 0)
+park_br_press=createGlobalPropertyf("il62/hydraulics/parkbrakes", 0)
+br_press=createGlobalPropertyf("il62/hydrosystem/brakes", 0)
+press_general=createGlobalPropertyf("il62/hydraulics/general_net", 0)
+press_hyd_pump=createGlobalPropertyf("il62/hydraulics/pumpstation", 0)
 demp_press=createGlobalPropertyf("il62/gidrosystem/demp_press_ball", 0)
 demp_temp=createGlobalPropertyf("il62/gidrosystem/demp_temp_ball", 0)
 
@@ -454,12 +542,12 @@ il62_lit_eng_reverse=createGlobalPropertyf("il62/lit/eng_reverse", 0)
 
 
 
-apu_per=createGlobalPropertyf("il62/lit/apu_perenapr", 0)
-apu_dc_wr=createGlobalPropertyf("il62/lit/apu_dc_wr", 0)
-vu1_lit=createGlobalPropertyf("il62/lit/vu1", 0)
-vu2_lit=createGlobalPropertyf("il62/lit/vu2", 0)
-vu3_lit=createGlobalPropertyf("il62/lit/vu3", 0)
-vu4_lit=createGlobalPropertyf("il62/lit/vu4", 0)
+apu_overcurrent=createGlobalPropertyf("il62/lit/apu_overcurrent", 0)
+apu_dc_avail=createGlobalPropertyf("il62/lit/apu_dc_avail", 0)
+rect1_lit=createGlobalPropertyf("il62/lit/rect1", 0)
+rect2_lit=createGlobalPropertyf("il62/lit/rect1", 0)
+rect3_lit=createGlobalPropertyf("il62/lit/rect1", 0)
+rect4_lit=createGlobalPropertyf("il62/lit/rect1", 0)
 apu_ac_wr=createGlobalPropertyf("il62/lit/apu_ac_wr", 0)
 gen1_lit=createGlobalPropertyf("il62/lit/gen1", 0)
 gen2_lit=createGlobalPropertyf("il62/lit/gen2", 0)
@@ -775,3 +863,23 @@ nosewheel_stvLbig=createGlobalPropertyf("il62/gears/nosewheel/stvLbig", 0)
 nosewheel_stvRbig=createGlobalPropertyf("il62/gears/nosewheel/stvRbig", 0)
 nosewheel_stvLsmall=createGlobalPropertyf("il62/gears/nosewheel/stvLsmall", 1)
 nosewheel_stvRsmall=createGlobalPropertyf("il62/gears/nosewheel/stvRsmall", 1)
+
+-- Other
+
+cockpitTemp=createGlobalPropertyf("il62/other/thermals/cockpit_temp", 21) -- temperature in the cabin
+
+
+-- F A I L U R E S
+
+bat1fail=createGlobalPropertyi("il62/failures/bat_1_fail", 0)
+bat1tru=createGlobalPropertyi("il62/failures/bat_1_tru", 0) -- TRU = thermal runaway
+bat2fail=createGlobalPropertyi("il62/failures/bat_2_fail", 0)
+bat2tru=createGlobalPropertyi("il62/failures/bat_2_tru", 0)
+bat3fail=createGlobalPropertyi("il62/failures/bat_3_fail", 0)
+bat3tru=createGlobalPropertyi("il62/failures/bat_3_tru", 0)
+bat4fail=createGlobalPropertyi("il62/failures/bat_4_fail", 0)
+bat5tru=createGlobalPropertyi("il62/failures/bat_4_tru", 0)
+rect1fail=createGlobalPropertyi("il62/failures/rect1_fail", 0)
+rect2fail=createGlobalPropertyi("il62/failures/rect2_fail", 0)
+rect3fail=createGlobalPropertyi("il62/failures/rect3_fail", 0)
+rect4fail=createGlobalPropertyi("il62/failures/rect4_fail", 0)
