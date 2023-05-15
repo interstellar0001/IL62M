@@ -49851,10 +49851,10 @@ P acf/_fixed_max/count 9
 P acf/_fixed_name/count 9
 P acf/_fixed_ref/0,0 0.000000000
 P acf/_fixed_ref/0,1 0.000000000
-P acf/_fixed_ref/0,2 0.000000000
+P acf/_fixed_ref/0,2 52.530387878
 P acf/_fixed_ref/1,0 0.000000000
 P acf/_fixed_ref/1,1 0.000000000
-P acf/_fixed_ref/1,2 0.000000000
+P acf/_fixed_ref/1,2 141.189605713
 P acf/_fixed_ref/2,0 0.000000000
 P acf/_fixed_ref/2,1 0.000000000
 P acf/_fixed_ref/2,2 0.000000000
@@ -49878,8 +49878,8 @@ P acf/_fixed_ref/8,1 0.000000000
 P acf/_fixed_ref/8,2 0.000000000
 P acf/_fixed_ref/i_count 9
 P acf/_fixed_ref/j_count 3
-P acf/_fixed_role/0 0
-P acf/_fixed_role/1 0
+P acf/_fixed_role/0 1
+P acf/_fixed_role/1 1
 P acf/_fixed_role/2 0
 P acf/_fixed_role/3 0
 P acf/_fixed_role/4 0
@@ -50720,6 +50720,14 @@ P acf/_tail_with_coll 0.000000000
 P acf/_tailnum IL62
 P acf/_tailrotor_EQ 0
 P acf/_takeoff_trim_11 0.000000000
+P acf/_tank_name/0 Tank 6
+P acf/_tank_name/1 Tank 2
+P acf/_tank_name/2 Tank 3
+P acf/_tank_name/3 Tank 1
+P acf/_tank_name/4 Tank 4
+P acf/_tank_name/5 Tank 5L
+P acf/_tank_name/6 Tank 5R
+P acf/_tank_name/7 Tank 7
 P acf/_tank_name/count 9
 P acf/_tank_part_en/0 -8
 P acf/_tank_part_en/1 -8

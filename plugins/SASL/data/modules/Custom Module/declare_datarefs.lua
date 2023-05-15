@@ -316,9 +316,9 @@ gen4_amp=createGlobalPropertyf("il62/electr/base/gen4_amp", 0)
 gen4_amp=createGlobalPropertyf("il62/electr/base/gen5_amp", 0)
 
 -- G P U (debug only)
-gpu_vb=createGlobalPropertyf("il62/debug/gpu_volt")
-gpu_wb=createGlobalPropertyi("il62/debug/gpu_work")
-gpu_ap=createGlobalPropertyf("il62/debug/gpu_amp")
+gpu_vb=createGlobalPropertyf("il62/debug/gpu_volt", 0)
+gpu_wb=createGlobalPropertyi("il62/debug/gpu_work", 0)
+gpu_ap=createGlobalPropertyf("il62/debug/gpu_amp", 0)
 
 rap=createGlobalPropertyf("il62/electr/base/rap", 0)
 vu_rad=createGlobalPropertyf("il62/electr/base/vu_rad", 0)
@@ -336,13 +336,27 @@ apu_pump=createGlobalPropertyf("il62/electr/apu/pump", 0) -- APU fuel pump
 apu_main=createGlobalPropertyf("il62/electr/apu/main", 0) -- Main APU switch
 apu_syson=createGlobalPropertyi("il62/apu/system_on", 0) -- APU System on
 apu_start_mode=createGlobalPropertyf("il62/electr/apu/start_mode", 0) -- APU start mode (Normal/Cold Start)
-apu_damper=createGlobalPropertyf("il62/electr/apu/damper", 0) -- APU damper (I have no idea wtf a damper does)
+apu_damper=createGlobalPropertyf("il62/electr/apu/bleed_switch", 0) -- APU damper (I have no idea wtf a damper does)
 apu_start=createGlobalPropertyf("il62/electr/apu/start", 0) -- Start APU
 apu_startseq=createGlobalPropertyi("il62/apu/start_sequence", 0)
 apu_stop=createGlobalPropertyf("il62/electr/apu/stop", 0) -- Stop APU
 apu_startbus=createGlobalPropertyf("il62/electr/apu/apu_start_bus", 0)
 apu_startcc=createGlobalPropertyf("il62/electr/apu/apu_start_cc", 0)
+createGlobalPropertyf("il62/electr/apu/apu_egt", 0)
+createGlobalPropertyf("il62/electr/apu/apu_rpm", 0)
+createGlobalPropertyf("il62/electr/apu/apu_oiltemp", 0)
+createGlobalPropertyf("il62/electr/apu/apu_oilquantity", 0)
+createGlobalPropertyf("il62/electr/apu/apu_oilpress", 0)
+createGlobalPropertyf("il62/electr/apu/apu_n1", 0)
+createGlobalPropertyi("il62/electr/apu/apu_system_on", 0)
+createGlobalPropertyf("il62/electr/apu/apu_fuel_remain", 0)
+createGlobalPropertyf("il62/electr/apu/apu_airpress", 0)
+createGlobalPropertyf("il62/electr/apu/apu_airdoors", 0)
+createGlobalPropertyf("il62/electr/apu/apu_fuelpress", 0)
 --apu_main_tumb_kolp=createGlobalPropertyf("il62/kvs/apu/tumb/main_tumb_kolp", 0) No idea what this is so disabled
+
+-- 27VDC L O A D S
+createGlobalPropertyf("il62/electr/fuel_pumps_27_cc")
 
 bus1_vol=createGlobalPropertyf("il62/electr/voltages/bus1_vdc", 0)
 bus2_vol=createGlobalPropertyf("il62/electr/voltages/bus2_vdc", 0)
@@ -871,6 +885,8 @@ cockpitTemp=createGlobalPropertyf("il62/other/thermals/cockpit_temp", 21) -- tem
 
 -- F A I L U R E S
 
+createGlobalPropertyi("il62/failures/failures_enabled/", 0) -- Are failures even on
+
 bat1fail=createGlobalPropertyi("il62/failures/bat_1_fail", 0)
 bat1tru=createGlobalPropertyi("il62/failures/bat_1_tru", 0) -- TRU = thermal runaway
 bat2fail=createGlobalPropertyi("il62/failures/bat_2_fail", 0)
@@ -883,3 +899,10 @@ rect1fail=createGlobalPropertyi("il62/failures/rect1_fail", 0)
 rect2fail=createGlobalPropertyi("il62/failures/rect2_fail", 0)
 rect3fail=createGlobalPropertyi("il62/failures/rect3_fail", 0)
 rect4fail=createGlobalPropertyi("il62/failures/rect4_fail", 0)
+createGlobalPropertyi("il62/failures/apu_start_fail", 0)
+createGlobalPropertyi("il62/failures/apu_gen_fail", 0)
+createGlobalPropertyi("il62/failures/apu_oilt_fail", 0)
+createGlobalPropertyi("il62/failures/apu_egt_fail", 0)
+createGlobalPropertyi("il62/failures/apu_fuel_left_fail", 0)
+createGlobalPropertyi("il62/failures/apu_fail", 0)
+createGlobalPropertyi("il62/failures/apu_press_fail", 0)

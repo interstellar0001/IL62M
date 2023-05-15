@@ -106,11 +106,17 @@ function update()
         local bus_em_1_amp = get(bus115_em_1_amp)
         local bus_em_2_amp = get(bus115_em_2_amp)
 
-        local gen1_work = get(gen1_work_bus) == 1
-        local gen2_work = get(gen2_work_bus) == 1
-        local gen3_work = get(gen3_work_bus) == 1
-        local gen4_work = get(gen4_work_bus) == 1
-        local gen5_work = get(gen5_work_bus) == 1
+        local gen1_int = get(gen1_work_bus)
+        local gen2_int = get(gen2_work_bus)
+        local gen3_int = get(gen3_work_bus)
+        local gen4_int = get(gen4_work_bus)
+        local gen5_int = get(gen5_work_bus)
+
+        local gen1_work = gen1_int == 1
+        local gen2_work = gen2_int == 1
+        local gen3_work = gen3_int == 1
+        local gen4_work = gen4_int == 1
+        local gen5_work = gen5_int == 1
         local gpu_work = get(gpu_work_bus) == 1
 
         local gen1_volt = get(gen1_volt_bus)
@@ -120,372 +126,95 @@ function update()
         local gen5_volt = get(gen5_volt_bus)
         local gpu_volt = get(gpu_volt_bus)
 
-        if gen1_work and gen2_work and gen3_work and gen4_work then -- All 4 generators work so APU/GPU are disregarded
-            bus1_volt = gen1_volt
-            bus2_volt = gen2_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus1_volt
-            bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp)
-            set(gen2_amp, bus2_amp)
-            set(gen3_amp, bus3_amp)
-            set(gen4_amp, bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen2_work and gen3_work and gen4_work then
-            bus1_volt = gen2_volt
-            bus2_volt = gen2_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus2_amp + bus1_amp)
-            set(gen3_amp, bus3_amp)
-            set(gen4_amp, bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen3_work and gen4_work then
-            bus1_volt = gen1_volt
-            bus2_volt = gen1_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp + bus2_amp)
-            set(gen2_amp, 0)
-            set(gen3_amp, bus3_amp)
-            set(gen4_amp, bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen2_work and gen4_work then
-            bus1_volt = gen1_volt
-            bus2_volt = gen2_volt
-            bus3_volt = gen4_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp)
-            set(gen2_amp, bus2_amp)
-            set(gen3_amp, 0)
-            set(gen4_amp, bus4_amp + bus3_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen2_work and gen3_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp)
-            set(gen2_amp, bus2_amp)
-            set(gen3_amp, bus3_amp + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen2_work and gen4_work then
-            bus1_volt = gen2_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen4_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus2_amp + bus1_amp)
-            set(gen3_amp, 0)
-            set(gen4_amp, bus3_amp + bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen3_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen1_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus2_amp + bus1_amp)
-            set(gen2_amp, 0)
-            set(gen3_amp, bus3_amp + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen3_work and gen4_work then
-            bus1_volt = gen3_volt
-            bus2_vol = gen4_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, bus1_amp + bus3_amp)
-            set(gen4_amp, bus2_amp + bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen2_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen1_volt
-            bus4_volt = gen2_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp + bus3_amp)
-            set(gen2_amp, bus2_amp + bus4_amp)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen2_work and gen3_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus2_amp + bus1_amp)
-            set(gen3_amp, bus3_amp + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen4_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus2_amp + bus1_amp)
-            set(gen3_amp, bus3_amp + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen2_work and gen4_work and gen5_work then
-            bus1_volt = gen2_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen4_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus2_amp/2 + bus1_1_amp)
-            set(gen3_amp, bus3_amp/2 + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus2_amp/2 + bus3_amp/2)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen3_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen1_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp/2 + bus2_amp)
-            set(gen2_amp, 0)
-            set(gen3_amp, bus3_amp/2 + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus1_amp/2 + bus3_amp/2)
-            set(gpu_amp, 0)
-        elseif gen3_work and gen4_work and gen5_work then
-            bus1_volt = gen4_volt
-            bus2_vol = gen3_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, bus3_amp/2 + bus2_amp)
-            set(gen4_amp, bus4_amp/2 + bus1_amp)
-            set(gen5_amp, bus3_amp/2 + bus4_amp/2)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen2_work and gen5_work then
-            bus1_volt = gen1_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen1_volt
-            bus4_volt = gen2_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp/2 + bus3_amp)
-            set(gen2_amp, bus2_amp/2 + bus4_amp)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus1_amp/2 + bus2_amp/2)
-            set(gpu_amp, 0)
-        elseif gen2_work and gen3_work and gen5_work then
-            bus1_volt = gen2_volt
-            bus2_vol = gen2_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus2_amp/2 + bus1_amp)
-            set(gen3_amp, bus3_amp/2 + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus2_amp/2 + bus3_amp/2)
-            set(gpu_amp, 0)
-        elseif gen4_work then
-            bus1_volt = gen4_volt
-            bus2_volt = gen4_volt
-            bus3_volt = gen4_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, bus1_amp + bus2_amp + bus3_amp + bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen3_work then
-            bus1_volt = gen3_volt
-            bus2_volt = gen3_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen4_amp, 0)
-            set(gen3_amp, bus1_amp + bus2_amp + bus3_amp + bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen2_work then
-            bus1_volt = gen2_volt
-            bus2_volt = gen2_volt
-            bus3_volt = gen2_volt
-            bus4_volt = gen2_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen4_amp, 0)
-            set(gen3_amp, 0)
-            set(gen2_amp, bus1_amp + bus2_amp + bus3_amp + bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen1_work then
-            bus1_volt = gen1_volt
-            bus2_volt = gen1_volt
-            bus3_volt = gen1_volt
-            bus4_volt = gen1_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen4_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen1_amp, bus1_amp + bus2_amp + bus3_amp + bus4_amp)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
-        elseif gen4_work and gen5_work then
-            bus1_volt = gen5_volt
-            bus2_volt = gen5_volt
-            bus3_volt = gen4_volt
-            bus4_volt = gen4_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, bus3_amp + bus4_amp)
-            set(gen5_amp, bus1_amp + bus2_amp)
-            set(gpu_amp, 0)
-        elseif gen3_work and gen5_work then
-            bus1_volt = gen5_volt
-            bus2_volt = gen5_volt
-            bus3_volt = gen3_volt
-            bus4_volt = gen3_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, bus3_amp + bus4_amp)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus1_amp + bus2_amp)
-            set(gpu_amp, 0)
-        elseif gen2_work and gen5_work then
-            bus1_volt = gen2_volt
-            bus2_volt = gen2_volt
-            bus3_volt = gen5_volt
-            bus4_volt = gen5_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, bus1_amp + bus2_amp)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus3_amp + bus4_amp)
-            set(gpu_amp, 0)
-        elseif gen1_work and gen5_work then
-            bus1_volt = gen1_volt
-            bus2_volt = gen1_volt
-            bus3_volt = gen5_volt
-            bus4_volt = gen5_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, bus1_amp + bus2_amp)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus3_amp + bus4_amp)
-            set(gpu_amp, 0)
-        elseif gen5_work then
-            bus1_volt = 0
-            bus2_volt = gen5_volt
-            bus3_volt = gen5_volt
-            bus4_volt = 0
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus2_amp + bus3_amp)
-        elseif gpu_work then
-            bus1_volt = 0
-            bus2_volt = gpu_volt
-            bus3_volt = gpu_volt
-            bus4_volt = 0
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, bus2_amp + bus3_amp)
-        elseif gen5_work and gpu_work then
-            bus1_volt = gpu_volt
-            bus2_volt = gen5_volt
-            bus3_volt = gen5_volt
-            bus4_volt = gpu_volt
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
-            set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, bus2_amp + bus3_amp)
-            set(gpu_amp, bus1_amp + bus4_amp)
-        else
-            bus1_volt = 0
-            bus2_volt = 0
-            bus3_volt = 0
-            bus4_volt = 0
-            bus_em_1_volt = bus2_volt
-			bus_em_2_volt = bus3_volt
 
+        -- count of active generators 1-4 (ignoring APU)
+        local gen_count = gen1_int + gen2_int + gen3_int + gen4_int
+
+        -- gen 1
+        if not gen1_work then
             set(gen1_amp, 0)
-            set(gen2_amp, 0)
-            set(gen3_amp, 0)
-            set(gen4_amp, 0)
-            set(gen5_amp, 0)
-            set(gpu_amp, 0)
+        elseif not gen2_work then
+            set(gen1_amp, bus1_amp + bus2_amp)
+            bus1_volt = gen1_volt
+            bus2_volt = gen1_volt
+        elseif gen_count > 2 then
+            set(gen1_amp, bus1_amp)
+            bus1_volt = gen1_volt
+        else
+            set(gen1_amp, bus1_amp + bus4_amp)
+            bus1_volt = gen1_volt
+            bus4_volt = gen1_volt
         end
 
+        -- gen 2
+        if not gen2_work then
+            set(gen2_amp, 0)
+        elseif not gen1_work then
+            set(gen2_amp, bus1_amp + bus2_amp)
+            bus1_volt = gen2_volt
+            bus2_volt = gen2_volt
+        elseif gen_count > 2 then
+            set(gen2_amp, bus2_amp)
+            bus2_volt = gen2_volt
+        else
+            set(gen2_amp, bus2_amp + bus3_amp)
+            bus2_volt = gen2_volt
+            bus3_volt = gen2_volt
+        end
+
+        -- gen 3
+        if not gen3_work then
+            set(gen3_amp, 0)
+        elseif not gen4_work then
+            set(gen3_amp, bus3_amp + bus4_amp)
+            bus3_volt = gen3_volt
+            bus4_volt = gen3_volt
+        elseif gen_count > 2 then
+            set(gen3_amp, bus3_amp)
+            bus3_volt = gen3_volt
+        else
+            set(gen3_amp, bus3_amp + bus2_amp)
+            bus3_volt = gen3_volt
+            bus2_volt = gen3_volt
+        end
+
+        -- gen 4
+        if not gen4_work then
+            set(gen4_amp, 0)
+        elseif not gen3_work then
+            set(gen4_amp, bus3_amp + bus4_amp)
+            bus4_volt = gen4_volt
+            bus3_volt = gen4_volt
+        elseif gen_count > 2 then
+            set(gen4_amp, bus4_amp)
+            bus4_volt = gen4_volt
+        else
+            set(gen4_amp, bus4_amp + bus1_amp)
+            bus4_volt = gen4_volt
+            bus1_volt = gen4_volt
+        end
+
+        -- gen 5 (APU)
+        if gen_count != 1 then
+            set(gen5_amp, 0)
+        elseif gen1_work or gen2_work then
+            set(gen5_amp, bus3_amp + bus4_amp)
+            bus3_volt = gen5_volt
+            bus4_volt = gen5_volt
+        elseif gen3_work or gen4_work then
+            set(gen5_amp, bus1_amp + bus2_amp)
+            bus1_volt = gen5_volt
+            bus2_volt = gen5_volt
+        elseif gen_count == 0 then
+            set(gen5_amp, bus2_amp + bus3_amp)
+            bus2_volt = gen5_volt
+            bus3_volt = gen5_volt
+        else
+            set(gen5_amp, bus2_amp + bus3_amp)
+            bus2_volt = gen5_volt
+            bus3_volt = gen5_volt
+        end
+        
         set(bus115_1_volt, bus1_volt)
         set(bus115_2_volt, bus2_volt)
         set(bus115_3_volt, bus3_volt)

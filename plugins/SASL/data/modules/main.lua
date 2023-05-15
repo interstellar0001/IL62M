@@ -12,6 +12,7 @@ sasl.options.setInteractivity(true)
 sasl.options.setRenderingMode2D(SASL_RENDER_2D_MULTIPASS)
 
 addSearchPath(moduleDirectory .. "/Custom Module/electrical")
+addSearchPath(moduleDirectory .. "/Custom Module/apu")
 
 components = {
     functions {},
@@ -21,4 +22,5 @@ components = {
     electrical_bat {},
     dc_logic {},
     ac_logic {},
+    apu_fails {},
 }
