@@ -195,7 +195,7 @@ function update()
         end
 
         -- gen 5 (APU)
-        if gen_count != 1 then
+        if gen_count ~= 1 then
             set(gen5_amp, 0)
         elseif gen1_work or gen2_work then
             set(gen5_amp, bus3_amp + bus4_amp)

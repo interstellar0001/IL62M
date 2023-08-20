@@ -1,6 +1,6 @@
 I
 10 Version
-_hobs_time 11405.536304
+_hobs_time 11991.338267
 _iql_view_type_1 v_3dc
 _iql_pe_x_1 -1.647833
 _iql_pe_y_1 1.361603
@@ -49,8 +49,8 @@ _wind_display_2 0
 _inset_map_2 1
 _dg_lat_adjust_0 0.000000
 _dg_lat_adjust_1 0.000000
-_dg_lat_adjust_2 54.419853
-_dg_lat_adjust_3 54.419853
-_dg_lat_adjust_4 54.419853
-_dg_lat_adjust_5 54.419853
+_dg_lat_adjust_2 51.417580
+_dg_lat_adjust_3 51.417580
+_dg_lat_adjust_4 51.417580
+_dg_lat_adjust_5 51.417580
 atc/_acf_tailnumber_ IL62

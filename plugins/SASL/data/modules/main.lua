@@ -22,5 +22,5 @@ components = {
     electrical_bat {},
     dc_logic {},
     ac_logic {},
-    apu_fails {},
+    apu_system {},
 }

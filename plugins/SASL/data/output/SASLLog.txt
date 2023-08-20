@@ -12,28 +12,28 @@
 [IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
 [IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:1 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
-[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:19 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
 [IL62 WARN]: [STACK]:| ...
 [IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/lit/rect1> already exists
 [IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
-[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:547 in function <f>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:565 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
-[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:19 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
 [IL62 WARN]: [STACK]:| ...
 [IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/lit/rect1> already exists
 [IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
-[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:548 in function <f>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:566 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
-[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:19 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
 [IL62 WARN]: [STACK]:| ...
 [IL62 WARN]: [STACK]:| createDataRef : DataRefsHandler::luaCreateDataRef: <il62/lit/rect1> already exists
 [IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:343 in function <createGlobalPropertyf>
-[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:549 in function <f>
+[IL62 WARN]: [STACK]:| ...ins/SASL/data/modules/Custom Module/declare_datarefs.lua:567 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <declare_datarefs>
-[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...Aircraft/Ilyushin 62M/plugins/SASL/data/modules/main.lua:19 in function <f>
 [IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <c>
 [IL62 WARN]: [STACK]:| ...
 [IL62 INFO]: [LUA]: loading	timelogic
@@ -41,23 +41,106 @@
 [IL62 INFO]: [LUA]: loading	electrical_bat
 [IL62 INFO]: [LUA]: "electrical_bat"	Loaded custom_modules/electrical/electrical_bat.lua!
 [IL62 INFO]: [LUA]: loading	dc_logic
-[IL62 INFO]: [LUA]: "dc_logic"	Loaded custom_modules/electrical/dc_logic.lua!
+[IL62 INFO]: [LUA]: "dc_logic"	Loaded custom_modules/electrical/dc_logic.lua
+[IL62 INFO]: [LUA]: loading	ac_logic
+[IL62 INFO]: [LUA]: loading	apu_system
+[IL62 INFO]: [LUA]: loading	apu_logic
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/flightmodel/weight/m_fuel[6]> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_logic.lua:39 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_logic>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:3 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 DEBUG]: [LUA]: "il62/electr/apu/apu_fuelpress": Casting float to int
+[IL62 INFO]: [LUA]: loading	apu_panel
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/low_oil_press> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:12 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/high_temp> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:13 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/high_rpm> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:14 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/tsa6_fail> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:15 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/doors_open> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:16 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/fuel_press> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:17 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/lights/apu/start_ready> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:297 in function <globalPropertyf>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:18 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/electr/apu/start_sequence> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:27 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 DEBUG]: [LUA]: "sim/cockpit2/electrical/APU_N1_percent": Casting float to int
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <sim/aircraft/overflow/acf_has_APU_switch> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_panel.lua:49 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_panel>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:4 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 INFO]: [LUA]: including	smooth_light.lua
+[IL62 INFO]: [LUA]: loading	apu_fails
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/failures/apu_fail_oilt> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_fails.lua:19 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_fails>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:5 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/failures/apu_fail_egt> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_fails.lua:20 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_fails>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:5 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
+[IL62 WARN]: [STACK]:| findDataRef : DataRefsHandler::luaFindDataRef: <il62/failures/apu_fail_fuel_left> not found
+[IL62 WARN]: [STACK]:| ...t/Ilyushin 62M/plugins/SASL/data/init/initProperties.lua:390 in function <globalPropertyi>
+[IL62 WARN]: [STACK]:| ...lugins/SASL/data/modules/Custom Module/apu/apu_fails.lua:21 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_fails>
+[IL62 WARN]: [STACK]:| ...ugins/SASL/data/modules/Custom Module/apu/apu_system.lua:5 in function <f>
+[IL62 WARN]: [STACK]:| ...ircraft/Ilyushin 62M/plugins/SASL/data/init/initMain.lua:260 in function <apu_system>
+[IL62 WARN]: [STACK]:| ...
 [IL62 INFO]: Module loaded
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
-[IL62 INFO]: [LUA]: "electrical_bat"	1
-[IL62 INFO]: [LUA]: "electrical_bat"	table: 0x023581b8cae8
 [IL62 INFO]: Disabling...
 [IL62 INFO]: SASL plugin stopped...

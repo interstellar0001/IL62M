@@ -6,7 +6,7 @@
 
 ]]--
 
-print("Loaded custom_modules/electrical/dc_logic.lua!")
+print("Loaded custom_modules/electrical/dc_logic.lua")
 
 -- C O N T R O L
 defineProperty("busDLC_connect", globalPropertyi("il62/electr/buses/leftDC_connect")) -- Left DC Bus connected
