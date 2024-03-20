@@ -4,6 +4,7 @@
  # Roadmap
 | Order | Part                      | Status                      |
 |-------|---------------------------|-----------------------------|
+| 0     | Flyable with basic XP12 Systems | WIP, just started           |
 | 1     | Modeling (Interior)       | WIP, 50% done               |
 | 2     | Modeling (Exterior)       | ✓                           |
 | 3     | Basic SASL scripting      | WIP, just started           |
