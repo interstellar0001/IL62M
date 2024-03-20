@@ -4,10 +4,10 @@
  # Roadmap
 | Order | Part                      | Status                      |
 |-------|---------------------------|-----------------------------|
-| 1     | Modeling (Interior)       | WIP, not that much made yet |
-| 2     | Modeling (Exterior)       | WIP, almost done            |
+| 1     | Modeling (Interior)       | WIP, 50% done               |
+| 2     | Modeling (Exterior)       | ✓                           |
 | 3     | Basic SASL scripting      | WIP, just started           |
-| 4     | Retexturing (Translation) | WIP, not that much made yet |
+| 4     | Retexturing (Translation) | WIP, 75% done               |
 | 5     | FMOD Soundpack            | WIP, just started           |
 | 6     | Updater App               | Not started                 |
 | 7     | Full systems              | Not started                 |
