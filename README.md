@@ -2,7 +2,7 @@
   This aircraft is developed from the unfinished, open-source RuPlanes IL62M.
 
 # Update Feb. 2026 - Help needed!
-  After a huge data-loss and the realization that I over-estimated myself, i abandonded the project. However, after requests to continue the Project I decided to rev up them fryers and start work again
+  After a huge data-loss and the realization that I over-estimated myself, i abandonded the project.
   *Any help is greatly appreciated! If you have experience in X-Plane development, know technical details or can help in any way, do not hesitate to send me an Email.* [project_il62@icloud.com](mailto:project_il62@icloud.com)
   
  # Roadmap
